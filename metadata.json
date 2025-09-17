@@ -1,0 +1,5 @@
+{
+  "name": "Smart Travel Data Capture App",
+  "description": "A smart travel app to capture trip data, track expenses, and provide AI-powered suggestions, with an admin dashboard for NATPAC.",
+  "requestFramePermissions": []
+}
