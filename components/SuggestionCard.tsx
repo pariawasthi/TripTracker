@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Suggestion } from '../types';
 
@@ -8,12 +7,20 @@ interface SuggestionCardProps {
 
 const SuggestionCard: React.FC<SuggestionCardProps> = ({ suggestion }) => {
   return (
-    <div className="bg-brand-light rounded-xl shadow-md overflow-hidden">
-      <img src={suggestion.imageUrl} alt={suggestion.title} className="w-full h-40 object-cover" />
-      <div className="p-4">
-        <h3 className="font-bold text-lg text-brand-dark">{suggestion.title}</h3>
-        <p className="text-sm text-gray-600 mt-1 mb-2">{suggestion.description}</p>
-        <div className="text-right font-semibold text-brand-teal">
+    <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden w-full max-w-[300px]">
+      <img
+        src={suggestion.imageUrl}
+        alt={suggestion.title}
+        className="w-full h-24 sm:h-28 object-cover"
+      />
+      <div className="p-3">
+        <h3 className="font-semibold text-sm sm:text-base text-brand-dark truncate">
+          {suggestion.title}
+        </h3>
+        <p className="text-xs text-gray-600 mt-1 mb-1 truncate">
+          {suggestion.description}
+        </p>
+        <div className="text-right font-semibold text-brand-teal text-sm">
           Budget: ₹{suggestion.budget}
         </div>
       </div>
