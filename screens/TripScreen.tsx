@@ -38,6 +38,12 @@ const TripScreen: React.FC = () => {
     endTrip(distance, elapsedTime);
     navigate('/history');
   };
+  
+  const handlepauseTrip = () => {
+    endTrip(distance, elapsedTime);
+    
+  };
+
 
   const handleAddInfo = () => {
     if (tripInfo.trim()) {
@@ -89,12 +95,18 @@ const TripScreen: React.FC = () => {
       </div>
 
       {/* End Trip Button */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 w-full px-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex w-full justify-evenly  px-2">
         <button
           onClick={handleEndTrip}
           className="w-full bg-red-600 text-white font-bold py-3 px-4 rounded-full shadow-lg text-base transform hover:scale-105 transition-transform"
         >
           End Trip
+        </button>
+         <button
+          onClick={handlepauseTrip}
+          className="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-full shadow-lg text-base transform hover:scale-105 transition-transform"
+        >
+          Pause
         </button>
       </div>
 

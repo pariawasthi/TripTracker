@@ -18,6 +18,8 @@ const Navbar: React.FC<NavbarProps> = ({ position = 'fixed' }) => {
   const activeLinkClass =
     'text-brand-orange bg-brand-light rounded-lg px-2 py-1 shadow-md';
   const inactiveLinkClass = 'text-gray-500 hover:text-brand-orange';
+  const adminHighlightClass =
+    'text-white bg-brand-orange rounded-lg px-2 py-1 shadow-lg font-semibold';
 
   return (
     <nav
@@ -32,7 +34,11 @@ const Navbar: React.FC<NavbarProps> = ({ position = 'fixed' }) => {
             to={item.path}
             className={({ isActive }) =>
               `flex flex-col items-center justify-center text-xs transition-colors duration-200 ${
-                isActive ? activeLinkClass : inactiveLinkClass
+                item.label === 'Admin'
+                  ? adminHighlightClass
+                  : isActive
+                  ? activeLinkClass
+                  : inactiveLinkClass
               }`
             }
           >

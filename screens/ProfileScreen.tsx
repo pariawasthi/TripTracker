@@ -4,11 +4,11 @@ import dash from '../assets/dash.jpeg';
 const ProfileScreen: React.FC = () => {
   
   const handleSOS = () => {
-    alert('Emergency SOS Activated!\nLocation: 12.9716° N, 77.5946° E (Bengaluru)\nAuthorities have been notified.');
+    alert('Emergency SOS Activated!\nLocation: 12.9716° N, 77.5946° E (shahdol)\nAuthorities have been notified.');
   };
   
   const handleAnimalHelp = () => {
-    alert('Animal Help Requested!\nLocation: 12.9716° N, 77.5946° E (Bengaluru)\nNearby animal rescue services have been contacted.');
+    alert('Live Location shared by userID 1234!\nLocation: 12.9716° N, 77.5946° E (shahdol)\n try to contact them.');
   }
 
   const handleDeleteData = () => {
@@ -42,9 +42,9 @@ const ProfileScreen: React.FC = () => {
         </button>
         <button 
           onClick={handleAnimalHelp} 
-          className="bg-orange-400 w-full text-white font-semibold py-3 rounded-lg shadow-sm hover:bg-orange-500 text-sm"
+          className="bg-green-500 w-full text-white font-semibold py-3 rounded-lg shadow-sm hover:bg-green-600 text-sm"
         >
-          Animal Help
+         Live Location
         </button>
       </div>
 

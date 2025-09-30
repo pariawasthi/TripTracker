@@ -4,6 +4,9 @@ import SuggestionCard from '../components/SuggestionCard';
 import ExpenseItem from '../components/ExpenseItem';
 import { TrophyIcon, LeafIcon } from '../assets/icons';
 import travel from '../assets/travel.jpeg';
+import sun from '../assets/sunn.jpg';
+import water from '../assets/waterr.jpg';
+
 
 const mockExpenses: Expense[] = [
   { id: '1', category: 'Fuel', amount: 1500, description: 'Petrol for car', date: '2024-07-21' },
@@ -13,8 +16,8 @@ const mockExpenses: Expense[] = [
 ];
 
 const mockSuggestions: Suggestion[] = [
-  { id: '1', title: 'Weekend Getaway', description: 'Enjoy a scenic sunrise.', budget: 2000, imageUrl: 'https://picsum.photos/seed/nandi/400/300' },
-  { id: '2', title: 'Day Trip to Falls', description: 'Witness majestic waterfalls.', budget: 2500, imageUrl: 'https://picsum.photos/seed/falls/400/300' },
+  { id: '1', title: 'Weekend Getaway', description: 'Enjoy a scenic sunrise.', budget: 2000, imageUrl: sun },
+  { id: '2', title: 'Day Trip to Falls', description: 'Witness majestic waterfalls.', budget: 2500, imageUrl: water },
 ];
 
 const mockBadges = [
@@ -69,7 +72,7 @@ const UserScreen: React.FC = () => {
         )}
 
         {activeTab === 'suggestions' && (
-          <div className="space-y-2 animate-fade-in overflow-y-auto max-h-[500px]">
+          <div className="space-y-2 animate-fade-in overflow-y-auto  max-h-[500px]">
             {mockSuggestions.map(suggestion => (
               <SuggestionCard key={suggestion.id} suggestion={suggestion} />
             ))}
